@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EchoVault – Secret Message in an Image</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>EchoVault – Secret Message in an Image</h1>
+    <p class="description">Hide or reveal secret messages in images. Keep your messages safe and sound!</p>
+
+    <div id="hideMessage">
+      <h2>Hide a Message</h2>
+      <input type="file" id="imageUpload" accept="image/png">
+      <textarea id="message" placeholder="Enter your secret message..."></textarea>
+      <button onclick="hideMessage()">Hide Message</button>
+      <a id="downloadLink" style="display: none;" href="#" download="image_with_message.png">Download Image</a>
+    </div>
+
+    <div id="revealMessage" style="display: none;">
+      <h2>Reveal a Message</h2>
+      <input type="file" id="imageReveal" accept="image/png">
+      <button onclick="revealMessage()">Reveal Message</button>
+      <p id="hiddenMessage" style="display: none;"></p>
+    </div>
+
+    <footer>
+      <p>Made by Astral | <span id="quote">"Your customizable quote here."</span></p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
